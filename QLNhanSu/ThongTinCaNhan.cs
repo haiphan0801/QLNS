@@ -38,7 +38,7 @@ namespace QLNhanSu
                         form1.Show();
                         break;
                     case 1:
-                        Form2 form2 = new Form2();
+                        TonGiao form2 = new TonGiao();
                         form2.TopLevel = false;
                         form2.FormBorderStyle = FormBorderStyle.None;
                         form2.Dock = DockStyle.Fill;
@@ -46,7 +46,7 @@ namespace QLNhanSu
                         form2.Show();
                         break;
                     case 2:
-                        Form3 form3 = new Form3();
+                        TrinhDo form3 = new TrinhDo();
                         form3.TopLevel = false;
                         form3.FormBorderStyle = FormBorderStyle.None;
                         form3.Dock = DockStyle.Fill;

@@ -22,3 +22,15 @@ C:\Users\Admin\Source\Repos\haiphan0801\QLNS\DataLayer\obj\Debug\DataLayer.cspro
 C:\Users\Admin\Source\Repos\haiphan0801\QLNS\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 C:\Users\Admin\Source\Repos\haiphan0801\QLNS\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\Admin\Source\Repos\haiphan0801\QLNS\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\HEHE\Source\Repos\haiphan0801\QLNS\DataLayer\obj\Debug\DataLayer.pdb
