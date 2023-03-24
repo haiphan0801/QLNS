@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="MABC" />
     </Key>
-    <Property Name="MABC" Type="int" Nullable="false" />
+    <Property Name="MABC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NAM" Type="int" />
     <Property Name="THANG" Type="int" />
     <Property Name="NGAY" Type="int" />
@@ -19,15 +19,25 @@
     <Key>
       <PropertyRef Name="IDBP" />
     </Key>
-    <Property Name="IDBP" Type="int" Nullable="false" />
+    <Property Name="IDBP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENBP" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tb_CHUCVU">
     <Key>
       <PropertyRef Name="IDCV" />
     </Key>
-    <Property Name="IDCV" Type="int" Nullable="false" />
+    <Property Name="IDCV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENCV" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_CONGTY">
+    <Key>
+      <PropertyRef Name="MACTY" />
+    </Key>
+    <Property Name="MACTY" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENCTY" Type="nvarchar" MaxLength="100" />
+    <Property Name="DIENTHOAI" Type="nvarchar" MaxLength="15" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="tb_DANTOC">
     <Key>
@@ -40,7 +50,7 @@
     <Key>
       <PropertyRef Name="SOHD" />
     </Key>
-    <Property Name="SOHD" Type="int" Nullable="false" />
+    <Property Name="SOHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NGAYBATDAU" Type="datetime" />
     <Property Name="NGAYKETTHUC" Type="datetime" />
     <Property Name="NGAYKY" Type="datetime" />
@@ -54,7 +64,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SOKTKL" Type="int" />
     <Property Name="NOIDUNG" Type="nvarchar" MaxLength="500" />
     <Property Name="NGAY" Type="datetime" />
@@ -65,7 +75,7 @@
     <Key>
       <PropertyRef Name="IDLOAICA" />
     </Key>
-    <Property Name="IDLOAICA" Type="int" Nullable="false" />
+    <Property Name="IDLOAICA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENLOAICA" Type="nvarchar" MaxLength="50" />
     <Property Name="HESO" Type="float" />
   </EntityType>
@@ -73,7 +83,7 @@
     <Key>
       <PropertyRef Name="IDLC" />
     </Key>
-    <Property Name="IDLC" Type="int" Nullable="false" />
+    <Property Name="IDLC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENLC" Type="nvarchar" MaxLength="50" />
     <Property Name="HESO" Type="float" />
   </EntityType>
@@ -81,7 +91,7 @@
     <Key>
       <PropertyRef Name="MANV" />
     </Key>
-    <Property Name="MANV" Type="int" Nullable="false" />
+    <Property Name="MANV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HOTEN" Type="nvarchar" MaxLength="50" />
     <Property Name="GIOITINH" Type="bit" />
     <Property Name="NGAYSINH" Type="datetime" />
@@ -95,19 +105,20 @@
     <Property Name="IDTD" Type="int" />
     <Property Name="IDDT" Type="int" />
     <Property Name="IDTG" Type="int" />
+    <Property Name="MACTY" Type="int" />
   </EntityType>
   <EntityType Name="tb_PHONGBAN">
     <Key>
       <PropertyRef Name="IDPB" />
     </Key>
-    <Property Name="IDPB" Type="int" Nullable="false" />
+    <Property Name="IDPB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENPB" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tb_TANGCA">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NAM" Type="int" />
     <Property Name="THANG" Type="int" />
     <Property Name="NGAY" Type="int" />
@@ -126,14 +137,14 @@
     <Key>
       <PropertyRef Name="IDTD" />
     </Key>
-    <Property Name="IDTD" Type="int" Nullable="false" />
+    <Property Name="IDTD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENTD" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tb_UNGLUONG">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NAM" Type="int" />
     <Property Name="THANG" Type="int" />
     <Property Name="NGAY" Type="int" />
@@ -213,6 +224,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_NHANVIEN_CONGTY">
+    <End Role="tb_CONGTY" Type="Self.tb_CONGTY" Multiplicity="0..1" />
+    <End Role="tb_NHANVIEN" Type="Self.tb_NHANVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_CONGTY">
+        <PropertyRef Name="MACTY" />
+      </Principal>
+      <Dependent Role="tb_NHANVIEN">
+        <PropertyRef Name="MACTY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_NHANVIEN_PHONGBAN">
     <End Role="tb_PHONGBAN" Type="Self.tb_PHONGBAN" Multiplicity="0..1" />
     <End Role="tb_NHANVIEN" Type="Self.tb_NHANVIEN" Multiplicity="*" />
@@ -277,6 +300,7 @@
     <EntitySet Name="tb_BANGCONG" EntityType="Self.tb_BANGCONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_BOPHAN" EntityType="Self.tb_BOPHAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_CHUCVU" EntityType="Self.tb_CHUCVU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_CONGTY" EntityType="Self.tb_CONGTY" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_DANTOC" EntityType="Self.tb_DANTOC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_HOPDONG" EntityType="Self.tb_HOPDONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_KHENTHUONG_KYLUAT" EntityType="Self.tb_KHENTHUONG_KYLUAT" Schema="dbo" store:Type="Tables" />
@@ -310,6 +334,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_NHANVIEN_CHUCVU" Association="Self.FK_NHANVIEN_CHUCVU">
       <End Role="tb_CHUCVU" EntitySet="tb_CHUCVU" />
+      <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NHANVIEN_CONGTY" Association="Self.FK_NHANVIEN_CONGTY">
+      <End Role="tb_CONGTY" EntitySet="tb_CONGTY" />
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
     </AssociationSet>
     <AssociationSet Name="FK_NHANVIEN_PHONGBAN" Association="Self.FK_NHANVIEN_PHONGBAN">

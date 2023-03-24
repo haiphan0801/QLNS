@@ -33,6 +33,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tb_CONGTY">
+      <EntityTypeMapping TypeName="QuanlynhansuModel.tb_CONGTY">
+        <MappingFragment StoreEntitySet="tb_CONGTY">
+          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
+          <ScalarProperty Name="TENCTY" ColumnName="TENCTY" />
+          <ScalarProperty Name="DIENTHOAI" ColumnName="DIENTHOAI" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tb_DANTOC">
       <EntityTypeMapping TypeName="QuanlynhansuModel.tb_DANTOC">
         <MappingFragment StoreEntitySet="tb_DANTOC">
@@ -103,6 +114,7 @@
           <ScalarProperty Name="IDTD" ColumnName="IDTD" />
           <ScalarProperty Name="IDDT" ColumnName="IDDT" />
           <ScalarProperty Name="IDTG" ColumnName="IDTG" />
+          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

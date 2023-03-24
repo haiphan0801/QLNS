@@ -53,6 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoPhan.Designer.cs">
+      <DependentUpon>BoPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChucVu.Designer.cs">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongTy.Designer.cs">
+      <DependentUpon>CongTy.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanToc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +109,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BoPhan.resx">
+      <DependentUpon>BoPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChucVu.resx">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongTy.resx">
+      <DependentUpon>CongTy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanToc.resx">
       <DependentUpon>DanToc.cs</DependentUpon>
     </EmbeddedResource>
