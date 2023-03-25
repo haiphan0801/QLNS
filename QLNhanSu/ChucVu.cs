@@ -29,6 +29,13 @@ namespace QLNhanSu
             _showHide(true);
             loadData();
             dataGridView1.CellClick += dataGridView1_CellContentClick;
+            foreach (DataGridViewColumn col in dataGridView1.Columns)
+            {
+                if (col.Name.StartsWith("tb_"))
+                {
+                    col.Visible = false;
+                }
+            }
         }
 
         void _showHide(bool kt)
