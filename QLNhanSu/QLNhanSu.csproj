@@ -77,6 +77,18 @@
     <Compile Include="DanToc.Designer.cs">
       <DependentUpon>DanToc.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhongBan.Designer.cs">
+      <DependentUpon>PhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinCongTy.Designer.cs">
+      <DependentUpon>ThongTinCongTy.cs</DependentUpon>
+    </Compile>
     <Compile Include="TonGiao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanToc.resx">
       <DependentUpon>DanToc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhongBan.resx">
+      <DependentUpon>PhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCongTy.resx">
+      <DependentUpon>ThongTinCongTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TonGiao.resx">
       <DependentUpon>TonGiao.cs</DependentUpon>

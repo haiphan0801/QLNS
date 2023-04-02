@@ -224,18 +224,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_NHANVIEN_CONGTY">
-    <End Role="tb_CONGTY" Type="Self.tb_CONGTY" Multiplicity="0..1" />
-    <End Role="tb_NHANVIEN" Type="Self.tb_NHANVIEN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_CONGTY">
-        <PropertyRef Name="MACTY" />
-      </Principal>
-      <Dependent Role="tb_NHANVIEN">
-        <PropertyRef Name="MACTY" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_NHANVIEN_PHONGBAN">
     <End Role="tb_PHONGBAN" Type="Self.tb_PHONGBAN" Multiplicity="0..1" />
     <End Role="tb_NHANVIEN" Type="Self.tb_NHANVIEN" Multiplicity="*" />
@@ -334,10 +322,6 @@
     </AssociationSet>
     <AssociationSet Name="FK_NHANVIEN_CHUCVU" Association="Self.FK_NHANVIEN_CHUCVU">
       <End Role="tb_CHUCVU" EntitySet="tb_CHUCVU" />
-      <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
-    </AssociationSet>
-    <AssociationSet Name="FK_NHANVIEN_CONGTY" Association="Self.FK_NHANVIEN_CONGTY">
-      <End Role="tb_CONGTY" EntitySet="tb_CONGTY" />
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
     </AssociationSet>
     <AssociationSet Name="FK_NHANVIEN_PHONGBAN" Association="Self.FK_NHANVIEN_PHONGBAN">
