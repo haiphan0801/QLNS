@@ -88,6 +88,8 @@ namespace QLNhanSu
             _showHide(true);
             loadData();
             dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.Columns["IDPB"].Width = 150;
+            dataGridView1.Columns["TENPB"].Width = 500;
         }
         void _showHide(bool kt)
         {

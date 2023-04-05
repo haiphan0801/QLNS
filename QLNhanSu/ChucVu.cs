@@ -36,6 +36,8 @@ namespace QLNhanSu
                     col.Visible = false;
                 }
             }
+            dataGridView1.Columns["IDCV"].Width = 150;
+            dataGridView1.Columns["TENCV"].Width = 500;
         }
 
         void _showHide(bool kt)

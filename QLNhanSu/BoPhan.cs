@@ -36,6 +36,8 @@ namespace QLNhanSu
                     col.Visible = false;
                 }
             }
+            dataGridView1.Columns["IDBP"].Width = 150;
+            dataGridView1.Columns["TENBP"].Width = 500;
         }
 
         void _showHide(bool kt)
@@ -52,6 +54,7 @@ namespace QLNhanSu
         void loadData()
         {
             dataGridView1.DataSource = _bophan.getList();
+            
 
         }
         private void btnThem_Click(object sender, EventArgs e)

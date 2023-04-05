@@ -18,7 +18,7 @@ namespace QLNhanSu
         {
             InitializeComponent();
         }
-        TONGIAO _tongiao;
+       TONGIAO _tongiao;
         bool _them;
         int _id;
         private void TonGiao_Load(object sender, EventArgs e)
@@ -28,6 +28,8 @@ namespace QLNhanSu
             _showHide(true);
             loadData();
             dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.Columns["ID"].Width = 150;
+            dataGridView1.Columns["TENTG"].Width = 500;
         }
         void _showHide(bool kt)
         {
@@ -45,7 +47,6 @@ namespace QLNhanSu
             dataGridView1.DataSource = _tongiao.getList();
 
         }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             _showHide(false);
@@ -95,18 +96,17 @@ namespace QLNhanSu
         {
             if (_them)
             {
-                tb_TONGIAO tg = new tb_TONGIAO();
-                tg.TENTG = txtTen.Text;
-                _tongiao.Add(tg);
+                tb_TONGIAO dt = new tb_TONGIAO();
+                dt.TENTG = txtTen.Text;
+                _tongiao.Add(dt);
             }
             else
             {
-                var tg = _tongiao.getItem(_id);
-                tg.TENTG = txtTen.Text;
-                _tongiao.Update(tg);
+                var dt = _tongiao.getItem(_id);
+                dt.TENTG = txtTen.Text;
+                _tongiao.Update(dt);
             }
         }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -116,5 +116,7 @@ namespace QLNhanSu
                 txtTen.Text = row.Cells["TENTG"].Value.ToString();
             }
         }
+
+        
     }
 }

@@ -36,6 +36,12 @@ namespace QLNhanSu
                     col.Visible = false;
                 }
             }
+            dataGridView1.Columns["MACTY"].Width = 150;
+            dataGridView1.Columns["TENCTY"].Width = 500;
+            dataGridView1.Columns["EMAIL"].Width = 300;
+            dataGridView1.Columns["DIENTHOAI"].Width =150;
+            dataGridView1.Columns["DIACHI"].Width = 300;
+            
         }
 
         void _showHide(bool kt)
