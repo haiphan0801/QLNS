@@ -42,6 +42,7 @@
     <Property Name="DIENTHOAI" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="DIACHI" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_NHANVIEN" Relationship="Self.FK_NHANVIEN_CONGTY" FromRole="tb_CONGTY" ToRole="tb_NHANVIEN" />
   </EntityType>
   <EntityType Name="tb_DANTOC">
     <Key>
@@ -117,6 +118,7 @@
     <NavigationProperty Name="tb_BANGCONG" Relationship="Self.FK_BANGCONG_NHANVIEN" FromRole="tb_NHANVIEN" ToRole="tb_BANGCONG" />
     <NavigationProperty Name="tb_BOPHAN" Relationship="Self.FK_NHANVIEN_BOPHAN" FromRole="tb_NHANVIEN" ToRole="tb_BOPHAN" />
     <NavigationProperty Name="tb_CHUCVU" Relationship="Self.FK_NHANVIEN_CHUCVU" FromRole="tb_NHANVIEN" ToRole="tb_CHUCVU" />
+    <NavigationProperty Name="tb_CONGTY" Relationship="Self.FK_NHANVIEN_CONGTY" FromRole="tb_NHANVIEN" ToRole="tb_CONGTY" />
     <NavigationProperty Name="tb_HOPDONG" Relationship="Self.FK_HOPDONG_NHANVIEN" FromRole="tb_NHANVIEN" ToRole="tb_HOPDONG" />
     <NavigationProperty Name="tb_KHENTHUONG_KYLUAT" Relationship="Self.FK_KHENTHUONG_KYLUAT_NHANVIEN" FromRole="tb_NHANVIEN" ToRole="tb_KHENTHUONG_KYLUAT" />
     <NavigationProperty Name="tb_PHONGBAN" Relationship="Self.FK_NHANVIEN_PHONGBAN" FromRole="tb_NHANVIEN" ToRole="tb_PHONGBAN" />
@@ -219,6 +221,18 @@
       </Principal>
       <Dependent Role="tb_NHANVIEN">
         <PropertyRef Name="IDCV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NHANVIEN_CONGTY">
+    <End Role="tb_CONGTY" Type="Self.tb_CONGTY" Multiplicity="0..1" />
+    <End Role="tb_NHANVIEN" Type="Self.tb_NHANVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_CONGTY">
+        <PropertyRef Name="MACTY" />
+      </Principal>
+      <Dependent Role="tb_NHANVIEN">
+        <PropertyRef Name="MACTY" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -336,6 +350,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_NHANVIEN_CHUCVU" Association="Self.FK_NHANVIEN_CHUCVU">
       <End Role="tb_CHUCVU" EntitySet="tb_CHUCVU" />
+      <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NHANVIEN_CONGTY" Association="Self.FK_NHANVIEN_CONGTY">
+      <End Role="tb_CONGTY" EntitySet="tb_CONGTY" />
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
     </AssociationSet>
     <AssociationSet Name="FK_HOPDONG_NHANVIEN" Association="Self.FK_HOPDONG_NHANVIEN">
