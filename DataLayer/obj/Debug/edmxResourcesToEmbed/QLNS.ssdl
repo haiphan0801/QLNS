@@ -62,14 +62,22 @@
   </EntityType>
   <EntityType Name="tb_KHENTHUONG_KYLUAT">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="SOQUYETDINH" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="SOKTKL" Type="int" />
+    <Property Name="SOQUYETDINH" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LYDO" Type="nvarchar" MaxLength="200" />
     <Property Name="NOIDUNG" Type="nvarchar" MaxLength="500" />
     <Property Name="NGAY" Type="datetime" />
     <Property Name="MANV" Type="int" />
     <Property Name="LOAI" Type="int" />
+    <Property Name="TUNGAY" Type="datetime" />
+    <Property Name="DENNGAY" Type="datetime" />
+    <Property Name="CREATED_BY" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="DELETED_BY" Type="int" />
+    <Property Name="DELETED_DATE" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_LOAICA">
     <Key>
@@ -188,18 +196,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_KHENTHUONG_KYLUAT_NHANVIEN">
-    <End Role="tb_NHANVIEN" Type="Self.tb_NHANVIEN" Multiplicity="0..1" />
-    <End Role="tb_KHENTHUONG_KYLUAT" Type="Self.tb_KHENTHUONG_KYLUAT" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_NHANVIEN">
-        <PropertyRef Name="MANV" />
-      </Principal>
-      <Dependent Role="tb_KHENTHUONG_KYLUAT">
-        <PropertyRef Name="MANV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_NHANVIEN_BOPHAN">
     <End Role="tb_BOPHAN" Type="Self.tb_BOPHAN" Multiplicity="0..1" />
     <End Role="tb_NHANVIEN" Type="Self.tb_NHANVIEN" Multiplicity="*" />
@@ -221,18 +217,6 @@
       </Principal>
       <Dependent Role="tb_NHANVIEN">
         <PropertyRef Name="IDCV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_NHANVIEN_CONGTY">
-    <End Role="tb_CONGTY" Type="Self.tb_CONGTY" Multiplicity="0..1" />
-    <End Role="tb_NHANVIEN" Type="Self.tb_NHANVIEN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_CONGTY">
-        <PropertyRef Name="MACTY" />
-      </Principal>
-      <Dependent Role="tb_NHANVIEN">
-        <PropertyRef Name="MACTY" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -284,6 +268,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tb_KHENTHUONG_KYLUAT_tb_NHANVIEN">
+    <End Role="tb_NHANVIEN" Type="Self.tb_NHANVIEN" Multiplicity="0..1" />
+    <End Role="tb_KHENTHUONG_KYLUAT" Type="Self.tb_KHENTHUONG_KYLUAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="tb_KHENTHUONG_KYLUAT">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_UNGLUONG_NHANVIEN">
     <End Role="tb_NHANVIEN" Type="Self.tb_NHANVIEN" Multiplicity="0..1" />
     <End Role="tb_UNGLUONG" Type="Self.tb_UNGLUONG" Multiplicity="*" />
@@ -324,20 +320,12 @@
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
       <End Role="tb_HOPDONG" EntitySet="tb_HOPDONG" />
     </AssociationSet>
-    <AssociationSet Name="FK_KHENTHUONG_KYLUAT_NHANVIEN" Association="Self.FK_KHENTHUONG_KYLUAT_NHANVIEN">
-      <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
-      <End Role="tb_KHENTHUONG_KYLUAT" EntitySet="tb_KHENTHUONG_KYLUAT" />
-    </AssociationSet>
     <AssociationSet Name="FK_NHANVIEN_BOPHAN" Association="Self.FK_NHANVIEN_BOPHAN">
       <End Role="tb_BOPHAN" EntitySet="tb_BOPHAN" />
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
     </AssociationSet>
     <AssociationSet Name="FK_NHANVIEN_CHUCVU" Association="Self.FK_NHANVIEN_CHUCVU">
       <End Role="tb_CHUCVU" EntitySet="tb_CHUCVU" />
-      <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
-    </AssociationSet>
-    <AssociationSet Name="FK_NHANVIEN_CONGTY" Association="Self.FK_NHANVIEN_CONGTY">
-      <End Role="tb_CONGTY" EntitySet="tb_CONGTY" />
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
     </AssociationSet>
     <AssociationSet Name="FK_NHANVIEN_PHONGBAN" Association="Self.FK_NHANVIEN_PHONGBAN">
@@ -355,6 +343,10 @@
     <AssociationSet Name="FK_TANGCA_NHANVIEN" Association="Self.FK_TANGCA_NHANVIEN">
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
       <End Role="tb_TANGCA" EntitySet="tb_TANGCA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_KHENTHUONG_KYLUAT_tb_NHANVIEN" Association="Self.FK_tb_KHENTHUONG_KYLUAT_tb_NHANVIEN">
+      <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
+      <End Role="tb_KHENTHUONG_KYLUAT" EntitySet="tb_KHENTHUONG_KYLUAT" />
     </AssociationSet>
     <AssociationSet Name="FK_UNGLUONG_NHANVIEN" Association="Self.FK_UNGLUONG_NHANVIEN">
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />

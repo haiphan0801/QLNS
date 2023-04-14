@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DataLayer;
 using BusinessLayer;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 
 namespace QLNhanSu
@@ -18,6 +19,7 @@ namespace QLNhanSu
     {
         public NhanVien()
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             InitializeComponent();
         }
         NHANVIEN _nhanvien;
@@ -265,7 +267,7 @@ namespace QLNhanSu
 
             Microsoft.Office.Interop.Excel.Range cl9 = oSheet.get_Range("I3", "I3");
             cl9.Value2 = "Bộ phận";
-            cl9.ColumnWidth = 20;
+            cl9.ColumnWidth = 25;
 
             Microsoft.Office.Interop.Excel.Range cl10 = oSheet.get_Range("J3", "J3");
             cl10.Value2 = "Chức vụ";
@@ -437,5 +439,7 @@ namespace QLNhanSu
                 
             }
         }
+
+        
     }
 }

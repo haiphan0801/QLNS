@@ -38,6 +38,7 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHinhAnh = new System.Windows.Forms.Button();
             this.cboDanToc = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cboTrinhDo = new System.Windows.Forms.ComboBox();
@@ -60,11 +61,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.ckcGioiTinh = new System.Windows.Forms.CheckBox();
             this.ten = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnHinhAnh = new System.Windows.Forms.Button();
+            this.ckcGioiTinh = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).BeginInit();
@@ -189,6 +189,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1068, 178);
             this.panel2.TabIndex = 1;
+            // 
+            // btnHinhAnh
+            // 
+            this.btnHinhAnh.Location = new System.Drawing.Point(43, 148);
+            this.btnHinhAnh.Name = "btnHinhAnh";
+            this.btnHinhAnh.Size = new System.Drawing.Size(101, 23);
+            this.btnHinhAnh.TabIndex = 24;
+            this.btnHinhAnh.Text = "Chọn hình....";
+            this.btnHinhAnh.UseVisualStyleBackColor = true;
+            this.btnHinhAnh.Click += new System.EventHandler(this.btnHinhAnh_Click);
             // 
             // cboDanToc
             // 
@@ -382,17 +392,6 @@
             this.txtHoTen.Size = new System.Drawing.Size(100, 20);
             this.txtHoTen.TabIndex = 2;
             // 
-            // ckcGioiTinh
-            // 
-            this.ckcGioiTinh.AutoSize = true;
-            this.ckcGioiTinh.Font = new System.Drawing.Font("Tahoma", 8.7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckcGioiTinh.Location = new System.Drawing.Point(286, 39);
-            this.ckcGioiTinh.Name = "ckcGioiTinh";
-            this.ckcGioiTinh.Size = new System.Drawing.Size(71, 18);
-            this.ckcGioiTinh.TabIndex = 1;
-            this.ckcGioiTinh.Text = "Nam/Nữ";
-            this.ckcGioiTinh.UseVisualStyleBackColor = true;
-            // 
             // ten
             // 
             this.ten.AutoSize = true;
@@ -421,15 +420,16 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // btnHinhAnh
+            // ckcGioiTinh
             // 
-            this.btnHinhAnh.Location = new System.Drawing.Point(43, 148);
-            this.btnHinhAnh.Name = "btnHinhAnh";
-            this.btnHinhAnh.Size = new System.Drawing.Size(101, 23);
-            this.btnHinhAnh.TabIndex = 24;
-            this.btnHinhAnh.Text = "Chọn hình....";
-            this.btnHinhAnh.UseVisualStyleBackColor = true;
-            this.btnHinhAnh.Click += new System.EventHandler(this.btnHinhAnh_Click);
+            this.ckcGioiTinh.AutoSize = true;
+            this.ckcGioiTinh.Font = new System.Drawing.Font("Tahoma", 8.7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckcGioiTinh.Location = new System.Drawing.Point(286, 39);
+            this.ckcGioiTinh.Name = "ckcGioiTinh";
+            this.ckcGioiTinh.Size = new System.Drawing.Size(71, 18);
+            this.ckcGioiTinh.TabIndex = 1;
+            this.ckcGioiTinh.Text = "Nam/Nữ";
+            this.ckcGioiTinh.UseVisualStyleBackColor = true;
             // 
             // NhanVien
             // 
@@ -487,8 +487,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtNgaySinh;
         private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.CheckBox ckcGioiTinh;
         private System.Windows.Forms.Label ten;
         private System.Windows.Forms.Button btnHinhAnh;
+        private System.Windows.Forms.CheckBox ckcGioiTinh;
     }
 }

@@ -209,3 +209,5 @@ C:\Users\Admin\Source\Repos\QLNS8\QLNhanSu\obj\Debug\QLNhanSu.csproj.CopyComplet
 C:\Users\Admin\Source\Repos\QLNS8\QLNhanSu\obj\Debug\QLNhanSu.exe
 C:\Users\Admin\Source\Repos\QLNS8\QLNhanSu\obj\Debug\QLNhanSu.pdb
 C:\Users\Admin\Source\Repos\QLNS8\QLNhanSu\obj\Debug\QLNhanSu.csproj.ResolveComReference.cache
+C:\Users\HEHE\Source\Repos\QLNS\QLNhanSu\obj\Debug\QLNhanSu.csproj.ResolveComReference.cache
+C:\Users\HEHE\source\repos\QLNS\QLNhanSu\obj\Debug\QLNhanSu.KhenThuong.resources
