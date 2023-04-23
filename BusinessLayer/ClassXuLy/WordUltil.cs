@@ -20,7 +20,7 @@ namespace BusinessLayer.ClassXuLy
             _app = new Word.Application();
             _app.Visible = vCreateApp;
             object ob = System.Reflection.Missing.Value;
-            _doc = _app.Documents.Add(ref _pathFile, ref ob, ref ob, ref ob);
+            _doc = _app.Documents.Open(ref _pathFile, ref ob, ref ob, ref ob);
         }
 
         public void WriteFields(Dictionary<string, string> vValues)

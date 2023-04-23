@@ -77,9 +77,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Template\hd.docx" />
-    <None Include="Template\hopdong.docx" />
-    <None Include="Template\Hợp đồng 2.dotx" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

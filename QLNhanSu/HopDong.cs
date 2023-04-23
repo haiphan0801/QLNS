@@ -147,26 +147,6 @@ namespace QLNhanSu
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            
-
-            
-            //var word = new Microsoft.Office.Interop.Word.Application();
-            //word.Visible = true;
-
-            //Microsoft.Office.Interop.Word.Document doc = word.Documents.Add();
-            //Microsoft.Office.Interop.Word.Paragraph paragraph = doc.Paragraphs.Add();
-            //paragraph.Range.Text = richTextBoxNoiDung.Text;
-            //doc.SaveAs2("test.doc");
-            //Process.Start("test.doc");
-
-            //var word = new Microsoft.Office.Interop.Word.Application();
-            //word.Visible = true;
-            //string rtf = richTextBoxNoiDung.Rtf;
-            //Microsoft.Office.Interop.Word.Document doc = word.Documents.Add();
-            //Microsoft.Office.Interop.Word.Paragraph paragraph = doc.Paragraphs.Add();
-            //doc.Range().InsertBefore(rtf);
-            //doc.SaveAs2("test.rtf");
-
             string sohd = dataGridView1.CurrentRow.Cells["SOHD"].Value.ToString();
             tb_HOPDONG hopDong = _db.tb_HOPDONG.Single(p => p.SOHD == sohd);
            
@@ -175,12 +155,16 @@ namespace QLNhanSu
             dic.Add("MM", DateTime.Parse(hopDong.NGAYKY.ToString()).Month.ToString());
             dic.Add("yyyy", DateTime.Parse(hopDong.NGAYKY.ToString()).Year.ToString());
             dic.Add("SOHD", hopDong.SOHD);
-            var word = new Microsoft.Office.Interop.Word.Application();
-            //string gpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"Template\hd.docx";
-           
-            WordUltil wd = new WordUltil(word.StartupPath + "/Template/Hợp đồng 2.dotx", true);
+            dic.Add("HOTEN", hopDong.tb_NHANVIEN.HOTEN);
+            dic.Add("CCCD", hopDong.tb_NHANVIEN.CCCD);
+            dic.Add("DIACHI", hopDong.tb_NHANVIEN.DIACHI);
+            dic.Add("NGAYBATDAU", DateTime.Parse(hopDong.NGAYBATDAU.ToString()).ToString());
+            dic.Add("NGAYKETTHUC", DateTime.Parse(hopDong.NGAYKETTHUC.ToString()).ToString());
+        
+            string fileName = @"C:\Users\Admin\Desktop\công nghệ phần mềm\hopdong.docx";
+
+            WordUltil wd = new WordUltil(fileName, true);
             wd.WriteFields(dic);
-            
         }
 
         void SaveData()
