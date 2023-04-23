@@ -13,11 +13,11 @@ namespace BusinessLayer
         QuanlynhansuEntities db = new QuanlynhansuEntities();
         public tb_KHENTHUONG_KYLUAT getItem(string soQD)
         {
-            return db.tb_KHENTHUONG_KYLUAT.FirstOrDefault(x => x.SOQUYETDINH==soQD);
+            return db.tb_KHENTHUONG_KYLUAT.FirstOrDefault(x => x.SOQUYETDINH == soQD);
         }
         public List<tb_KHENTHUONG_KYLUAT> getList(int loai)
         {
-            return db.tb_KHENTHUONG_KYLUAT.Where(x=>x.LOAI == loai).ToList();
+            return db.tb_KHENTHUONG_KYLUAT.Where(x => x.LOAI == loai).ToList();
         }
         public List<KHENTHUONG_KYLUAT_DTO> getListFull(int loai)
         {
@@ -88,7 +88,7 @@ namespace BusinessLayer
             {
                 tb_KHENTHUONG_KYLUAT _kt = db.tb_KHENTHUONG_KYLUAT.FirstOrDefault(x => x.SOQUYETDINH == soQD);
                 _kt.DELETED_BY = maNV;
-                _kt.DELETED_DATE = DateTime.Now ;   
+                _kt.DELETED_DATE = DateTime.Now;
                 db.SaveChanges();
             }
             catch (Exception ex)

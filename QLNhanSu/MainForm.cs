@@ -61,5 +61,45 @@ namespace QLNhanSu
             panel2.Controls.Add(form2);
             form2.Show();
         }
+
+        private void hợpĐồngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            HopDong form2 = new HopDong();
+            form2.TopLevel = false;
+            form2.Dock = DockStyle.Fill;
+            panel2.Controls.Add(form2);
+            form2.Show();
+        }
+
+        private void kỉLuậtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            KiLuat form2 = new KiLuat();
+            form2.TopLevel = false;
+            form2.Dock = DockStyle.Fill;
+            panel2.Controls.Add(form2);
+            form2.Show();
+        }
+
+        private void điềuChuyểnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            DieuChuyen form2 = new DieuChuyen();
+            form2.TopLevel = false;
+            form2.Dock = DockStyle.Fill;
+            panel2.Controls.Add(form2);
+            form2.Show();
+        }
+
+        private void thôiViệcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            ThoiViec form2 = new ThoiViec();
+            form2.TopLevel = false;
+            form2.Dock = DockStyle.Fill;
+            panel2.Controls.Add(form2);
+            form2.Show();
+        }
     }
 }

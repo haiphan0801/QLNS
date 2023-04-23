@@ -35,7 +35,7 @@ namespace BusinessLayer
                 nvDTO.DIENTHOAI = item.DIENTHOAI;
                 nvDTO.DIACHI = item.DIACHI;
                 nvDTO.HINHANH = item.HINHANH;
-
+                nvDTO.THOIVIEC = item.DATHOIVIEC;
                 nvDTO.IDBP = item.IDBP;
                 var bp = db.tb_BOPHAN.FirstOrDefault(b => b.IDBP == item.IDBP);
                 nvDTO.TENBP = bp.TENBP;
@@ -93,6 +93,7 @@ namespace BusinessLayer
                 _nv.DIACHI = nv.DIACHI;
                 _nv.DIENTHOAI = nv.DIENTHOAI;
                 _nv.HINHANH = nv.HINHANH;
+                _nv.DATHOIVIEC = nv.DATHOIVIEC;
                 _nv.IDPB = nv.IDPB;
                 _nv.IDBP = nv.IDBP;
                 _nv.IDCV = nv.IDCV;

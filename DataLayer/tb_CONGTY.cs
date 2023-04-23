@@ -14,19 +14,10 @@ namespace DataLayer
     
     public partial class tb_CONGTY
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_CONGTY()
-        {
-            this.tb_HOPDONG = new HashSet<tb_HOPDONG>();
-        }
-    
         public int MACTY { get; set; }
         public string TENCTY { get; set; }
         public string DIENTHOAI { get; set; }
         public string EMAIL { get; set; }
         public string DIACHI { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_HOPDONG> tb_HOPDONG { get; set; }
     }
 }

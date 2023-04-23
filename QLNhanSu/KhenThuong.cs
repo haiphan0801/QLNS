@@ -49,7 +49,16 @@ namespace QLNhanSu
             dataGridView1.Columns["LOAI"].Visible = false;
             dataGridView1.Columns["TUNGAY"].Visible = false;
             dataGridView1.Columns["DENNGAY"].Visible = false;
+            dataGridView1.Columns["CREATED_BY"].Visible = false;
+            dataGridView1.Columns["CREATED_DATE"].Visible = false;
+            dataGridView1.Columns["UPDATED_BY"].Visible = false;
+            dataGridView1.Columns["UPDATED_DATE"].Visible = false;
+            dataGridView1.Columns["DELETED_BY"].Visible = false;
+            dataGridView1.Columns["DELETED_DATE"].Visible = false;
 
+            dataGridView1.Columns["NOIDUNG"].Width = 250;
+            dataGridView1.Columns["LYDO"].Width = 250;
+            dataGridView1.Columns["SOQUYETDINH"].Width = 150;
         }
 
         void _showHide(bool kt)

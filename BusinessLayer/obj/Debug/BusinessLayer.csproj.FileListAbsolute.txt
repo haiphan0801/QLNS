@@ -119,3 +119,4 @@ C:\Users\Admin\Source\Repos\QLNS11\BusinessLayer\obj\Debug\BusinessLayer.csproj.
 C:\Users\Admin\Source\Repos\QLNS11\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\Admin\Source\Repos\QLNS11\BusinessLayer\obj\Debug\BusinessLayer.pdb
 C:\Users\Admin\source\repos\QLNS11\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
+C:\Users\HEHE\Source\Repos\QLNS1\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
