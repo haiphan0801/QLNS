@@ -77,6 +77,12 @@
     <Compile Include="DanToc.Designer.cs">
       <DependentUpon>DanToc.cs</DependentUpon>
     </Compile>
+    <Compile Include="HopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HopDong.Designer.cs">
+      <DependentUpon>HopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhenThuong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     <EmbeddedResource Include="DanToc.resx">
       <DependentUpon>DanToc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HopDong.resx">
+      <DependentUpon>HopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhenThuong.resx">
       <DependentUpon>KhenThuong.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +181,7 @@
     <EmbeddedResource Include="ThongTinCaNhan.resx">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="hopdong.docx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -182,6 +192,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Template\hd.docx" />
+    <None Include="Template\Hợp đồng 2.dotx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -215,6 +227,15 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="VBIDE">
       <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>5</VersionMajor>
@@ -225,5 +246,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

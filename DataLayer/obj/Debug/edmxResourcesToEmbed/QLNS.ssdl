@@ -50,7 +50,7 @@
     <Key>
       <PropertyRef Name="SOHD" />
     </Key>
-    <Property Name="SOHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SOHD" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="NGAYBATDAU" Type="datetime" />
     <Property Name="NGAYKETTHUC" Type="datetime" />
     <Property Name="NGAYKY" Type="datetime" />
@@ -59,6 +59,13 @@
     <Property Name="THOIHAN" Type="nvarchar" MaxLength="50" />
     <Property Name="HESOLUONG" Type="float" />
     <Property Name="MANV" Type="int" />
+    <Property Name="MACTY" Type="int" />
+    <Property Name="DELETED_BY" Type="int" />
+    <Property Name="DELETED_DATE" Type="datetime" />
+    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="CREATED_BY" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_KHENTHUONG_KYLUAT">
     <Key>
@@ -114,6 +121,42 @@
     <Property Name="IDDT" Type="int" />
     <Property Name="IDTG" Type="int" />
     <Property Name="MACTY" Type="int" />
+    <Property Name="DATHOIVIEC" Type="bit" />
+  </EntityType>
+  <EntityType Name="tb_NHANVIEN_THOIVIEC">
+    <Key>
+      <PropertyRef Name="SOQD" />
+    </Key>
+    <Property Name="SOQD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NGAYNOPDON" Type="datetime" />
+    <Property Name="NGAYNGHI" Type="datetime" />
+    <Property Name="LYDO" Type="nvarchar" MaxLength="200" />
+    <Property Name="GHICHU" Type="nvarchar" MaxLength="500" />
+    <Property Name="CREATED_BY" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="DELETED_BY" Type="int" />
+    <Property Name="DELETED_DATE" Type="datetime" />
+    <Property Name="MANV" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_NHANVIEN-DIEUCHUYEN">
+    <Key>
+      <PropertyRef Name="SOQD" />
+    </Key>
+    <Property Name="SOQD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NGAY" Type="datetime" />
+    <Property Name="MANV" Type="int" />
+    <Property Name="MAPB" Type="int" />
+    <Property Name="MAPB2" Type="int" />
+    <Property Name="LYDO" Type="nvarchar" MaxLength="300" />
+    <Property Name="GHICHU" Type="nvarchar" MaxLength="500" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="CREATED_BY" Type="int" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="DELETED_DATE" Type="datetime" />
+    <Property Name="DELETED_BY" Type="int" />
   </EntityType>
   <EntityType Name="tb_PHONGBAN">
     <Key>
@@ -181,6 +224,18 @@
       </Principal>
       <Dependent Role="tb_BANGCONG">
         <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOPDONG_CONGTY">
+    <End Role="tb_CONGTY" Type="Self.tb_CONGTY" Multiplicity="0..1" />
+    <End Role="tb_HOPDONG" Type="Self.tb_HOPDONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_CONGTY">
+        <PropertyRef Name="MACTY" />
+      </Principal>
+      <Dependent Role="tb_HOPDONG">
+        <PropertyRef Name="MACTY" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -303,6 +358,8 @@
     <EntitySet Name="tb_LOAICA" EntityType="Self.tb_LOAICA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_LOAICONG" EntityType="Self.tb_LOAICONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_NHANVIEN" EntityType="Self.tb_NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_NHANVIEN_THOIVIEC" EntityType="Self.tb_NHANVIEN_THOIVIEC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_NHANVIEN-DIEUCHUYEN" EntityType="Self.tb_NHANVIEN-DIEUCHUYEN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_PHONGBAN" EntityType="Self.tb_PHONGBAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_TANGCA" EntityType="Self.tb_TANGCA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_TONGIAO" EntityType="Self.tb_TONGIAO" Schema="dbo" store:Type="Tables" />
@@ -315,6 +372,10 @@
     <AssociationSet Name="FK_BANGCONG_NHANVIEN" Association="Self.FK_BANGCONG_NHANVIEN">
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
       <End Role="tb_BANGCONG" EntitySet="tb_BANGCONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOPDONG_CONGTY" Association="Self.FK_HOPDONG_CONGTY">
+      <End Role="tb_CONGTY" EntitySet="tb_CONGTY" />
+      <End Role="tb_HOPDONG" EntitySet="tb_HOPDONG" />
     </AssociationSet>
     <AssociationSet Name="FK_HOPDONG_NHANVIEN" Association="Self.FK_HOPDONG_NHANVIEN">
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />

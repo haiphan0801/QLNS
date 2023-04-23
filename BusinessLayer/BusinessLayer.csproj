@@ -50,10 +50,13 @@
   <ItemGroup>
     <Compile Include="BOPHAN.cs" />
     <Compile Include="CHUCVU.cs" />
+    <Compile Include="ClassXuLy\WordUltil.cs" />
     <Compile Include="CONGTY.cs" />
     <Compile Include="DANTOC.cs" />
+    <Compile Include="DTO\HOPDONG_DTO.cs" />
     <Compile Include="DTO\KHENTHUONG_KYLUAT_DTO.cs" />
     <Compile Include="DTO\NHANVIEN_DTO.cs" />
+    <Compile Include="HOPDONG.cs" />
     <Compile Include="KHENTHUONG_KYLUAT.cs" />
     <Compile Include="NHANVIEN.cs" />
     <Compile Include="PHONGBAN.cs" />
@@ -70,6 +73,38 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Template\hd.docx" />
+    <None Include="Template\hopdong.docx" />
+    <None Include="Template\Hợp đồng 2.dotx" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

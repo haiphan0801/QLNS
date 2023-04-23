@@ -97,6 +97,12 @@
     <Compile Include="tb_NHANVIEN.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_NHANVIEN_DIEUCHUYEN.cs">
+      <DependentUpon>QLNS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_NHANVIEN_THOIVIEC.cs">
+      <DependentUpon>QLNS.tt</DependentUpon>
+    </Compile>
     <Compile Include="tb_PHONGBAN.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
