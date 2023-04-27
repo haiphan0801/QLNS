@@ -93,6 +93,12 @@
     <Property Name="IDLOAICA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENLOAICA" Type="nvarchar" MaxLength="50" />
     <Property Name="HESO" Type="float" />
+    <Property Name="CREATED_BY" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="DELETED_BY" Type="int" />
+    <Property Name="DELETED_DATE" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_LOAICONG">
     <Key>
@@ -101,6 +107,12 @@
     <Property Name="IDLC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENLC" Type="nvarchar" MaxLength="50" />
     <Property Name="HESO" Type="float" />
+    <Property Name="CREATED_BY" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="DELETED_BY" Type="int" />
+    <Property Name="DELETED_DATE" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_NHANVIEN">
     <Key>

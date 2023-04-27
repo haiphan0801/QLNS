@@ -52,6 +52,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tb_HOPDONG">
+      <EntityTypeMapping TypeName="QuanlynhansuModel.tb_HOPDONG">
+        <MappingFragment StoreEntitySet="tb_HOPDONG">
+          <ScalarProperty Name="SOHD" ColumnName="SOHD" />
+          <ScalarProperty Name="NGAYBATDAU" ColumnName="NGAYBATDAU" />
+          <ScalarProperty Name="NGAYKETTHUC" ColumnName="NGAYKETTHUC" />
+          <ScalarProperty Name="NGAYKY" ColumnName="NGAYKY" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="LANKY" ColumnName="LANKY" />
+          <ScalarProperty Name="THOIHAN" ColumnName="THOIHAN" />
+          <ScalarProperty Name="HESOLUONG" ColumnName="HESOLUONG" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
+          <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tb_KHENTHUONG_KYLUAT">
       <EntityTypeMapping TypeName="QuanlynhansuModel.tb_KHENTHUONG_KYLUAT">
         <MappingFragment StoreEntitySet="tb_KHENTHUONG_KYLUAT">
@@ -78,6 +100,12 @@
           <ScalarProperty Name="IDLOAICA" ColumnName="IDLOAICA" />
           <ScalarProperty Name="TENLOAICA" ColumnName="TENLOAICA" />
           <ScalarProperty Name="HESO" ColumnName="HESO" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
+          <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -87,6 +115,12 @@
           <ScalarProperty Name="IDLC" ColumnName="IDLC" />
           <ScalarProperty Name="TENLC" ColumnName="TENLC" />
           <ScalarProperty Name="HESO" ColumnName="HESO" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
+          <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -196,28 +230,6 @@
           <ScalarProperty Name="SOTIEN" ColumnName="SOTIEN" />
           <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
           <ScalarProperty Name="MANV" ColumnName="MANV" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tb_HOPDONG">
-      <EntityTypeMapping TypeName="QuanlynhansuModel.tb_HOPDONG">
-        <MappingFragment StoreEntitySet="tb_HOPDONG">
-          <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
-          <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
-          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
-          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
-          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
-          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
-          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
-          <ScalarProperty Name="MANV" ColumnName="MANV" />
-          <ScalarProperty Name="HESOLUONG" ColumnName="HESOLUONG" />
-          <ScalarProperty Name="THOIHAN" ColumnName="THOIHAN" />
-          <ScalarProperty Name="LANKY" ColumnName="LANKY" />
-          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
-          <ScalarProperty Name="NGAYKY" ColumnName="NGAYKY" />
-          <ScalarProperty Name="NGAYKETTHUC" ColumnName="NGAYKETTHUC" />
-          <ScalarProperty Name="NGAYBATDAU" ColumnName="NGAYBATDAU" />
-          <ScalarProperty Name="SOHD" ColumnName="SOHD" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

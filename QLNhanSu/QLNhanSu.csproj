@@ -101,6 +101,12 @@
     <Compile Include="KiLuat.Designer.cs">
       <DependentUpon>KiLuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoaiCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoaiCa.Designer.cs">
+      <DependentUpon>LoaiCa.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KiLuat.resx">
       <DependentUpon>KiLuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoaiCa.resx">
+      <DependentUpon>LoaiCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
