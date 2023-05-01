@@ -70,6 +70,9 @@
     <Compile Include="tb_BANGCONG.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_BANG_CONG_NHAN_VIEN_CHI_TIET.cs">
+      <DependentUpon>QLNS.tt</DependentUpon>
+    </Compile>
     <Compile Include="tb_BOPHAN.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
@@ -86,6 +89,12 @@
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_KHENTHUONG_KYLUAT.cs">
+      <DependentUpon>QLNS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_KYCONG.cs">
+      <DependentUpon>QLNS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_KYCONGCHITIET.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_LOAICA.cs">

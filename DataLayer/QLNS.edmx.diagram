@@ -4,22 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="716758fc5c354e139d790b0752f3409d" Name="Diagram1">
+      <Diagram DiagramId="7bda11e354a04d019d87d176a35a6a29" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanlynhansuModel.tb_BANG_CONG_NHAN_VIEN_CHI_TIET" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_BANGCONG" Width="1.5" PointX="8.25" PointY="10.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_BOPHAN" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_CHUCVU" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanlynhansuModel.tb_CONGTY" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanlynhansuModel.tb_DANTOC" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlynhansuModel.tb_CONGTY" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlynhansuModel.tb_DANTOC" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_HOPDONG" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_KHENTHUONG_KYLUAT" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlynhansuModel.tb_KYCONG" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlynhansuModel.tb_KYCONGCHITIET" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_LOAICA" Width="1.5" PointX="6" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_LOAICONG" Width="1.5" PointX="6" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_NHANVIEN" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanlynhansuModel.tb_NHANVIEN_THOIVIEC" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanlynhansuModel.tb_NHANVIEN_DIEUCHUYEN" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlynhansuModel.tb_NHANVIEN_THOIVIEC" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlynhansuModel.tb_NHANVIEN_DIEUCHUYEN" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_PHONGBAN" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_TANGCA" Width="1.5" PointX="8.25" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanlynhansuModel.tb_TONGIAO" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlynhansuModel.tb_TONGIAO" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_TRINHDO" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlynhansuModel.tb_UNGLUONG" Width="1.5" PointX="5.25" PointY="22.875" IsExpanded="true" />
         <AssociationConnector Association="QuanlynhansuModel.FK_BANGCONG_LOAICONG" ManuallyRouted="false" />

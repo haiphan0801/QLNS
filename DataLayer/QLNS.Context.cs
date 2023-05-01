@@ -25,6 +25,7 @@ namespace DataLayer
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<tb_BANG_CONG_NHAN_VIEN_CHI_TIET> tb_BANG_CONG_NHAN_VIEN_CHI_TIET { get; set; }
         public virtual DbSet<tb_BANGCONG> tb_BANGCONG { get; set; }
         public virtual DbSet<tb_BOPHAN> tb_BOPHAN { get; set; }
         public virtual DbSet<tb_CHUCVU> tb_CHUCVU { get; set; }
@@ -32,6 +33,8 @@ namespace DataLayer
         public virtual DbSet<tb_DANTOC> tb_DANTOC { get; set; }
         public virtual DbSet<tb_HOPDONG> tb_HOPDONG { get; set; }
         public virtual DbSet<tb_KHENTHUONG_KYLUAT> tb_KHENTHUONG_KYLUAT { get; set; }
+        public virtual DbSet<tb_KYCONG> tb_KYCONG { get; set; }
+        public virtual DbSet<tb_KYCONGCHITIET> tb_KYCONGCHITIET { get; set; }
         public virtual DbSet<tb_LOAICA> tb_LOAICA { get; set; }
         public virtual DbSet<tb_LOAICONG> tb_LOAICONG { get; set; }
         public virtual DbSet<tb_NHANVIEN> tb_NHANVIEN { get; set; }

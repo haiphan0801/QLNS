@@ -5,6 +5,29 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="QuanlynhansuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MAKYCONG" Type="int" Nullable="false" />
+          <Property Name="MANV" Type="int" />
+          <Property Name="MACTY" Type="int" />
+          <Property Name="HOTEN" Type="nvarchar" MaxLength="50" />
+          <Property Name="NGAY" Type="datetime" />
+          <Property Name="THU" Type="nvarchar" MaxLength="50" />
+          <Property Name="GIOVAO" Type="nvarchar" MaxLength="50" />
+          <Property Name="GIORA" Type="nvarchar" MaxLength="50" />
+          <Property Name="NGAYPHEP" Type="float" />
+          <Property Name="CONGNGAYLE" Type="float" />
+          <Property Name="CONGCHUNHAT" Type="float" />
+          <Property Name="KYHIEU" Type="nvarchar" MaxLength="50" />
+          <Property Name="GHICHU" Type="nvarchar" MaxLength="500" />
+          <Property Name="CREATED_DATE" Type="datetime" />
+          <Property Name="CREATED_BY" Type="int" />
+          <Property Name="UPDATED_DATE" Type="datetime" />
+          <Property Name="UPDATED_BY" Type="int" />
+        </EntityType>
         <EntityType Name="tb_BANGCONG">
           <Key>
             <PropertyRef Name="MABC" />
@@ -90,6 +113,76 @@
           <Property Name="UPDATED_DATE" Type="datetime" />
           <Property Name="DELETED_BY" Type="int" />
           <Property Name="DELETED_DATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tb_KYCONG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MAKYCONG" Type="int" Nullable="false" />
+          <Property Name="NAM" Type="int" />
+          <Property Name="THANG" Type="int" />
+          <Property Name="KHOA" Type="bit" />
+          <Property Name="NGAYTINHCONG" Type="datetime" />
+          <Property Name="NGAYCONGTRONGTHANG" Type="float" />
+          <Property Name="MACTY" Type="int" />
+          <Property Name="TRANGTHAI" Type="bit" />
+          <Property Name="CREATED_DATE" Type="datetime" />
+          <Property Name="CREATED_BY" Type="int" />
+          <Property Name="UPDATED_DATE" Type="datetime" />
+          <Property Name="UPDATED_BY" Type="int" />
+          <Property Name="DELETED_DATE" Type="datetime" />
+          <Property Name="DELETED_BY" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_KYCONGCHITIET">
+          <Key>
+            <PropertyRef Name="MAKYCONG" />
+          </Key>
+          <Property Name="MAKYCONG" Type="int" Nullable="false" />
+          <Property Name="MANV" Type="int" />
+          <Property Name="HOTEN" Type="nvarchar" MaxLength="50" />
+          <Property Name="MACTY" Type="int" />
+          <Property Name="D1" Type="nvarchar" MaxLength="10" />
+          <Property Name="D2" Type="nvarchar" MaxLength="10" />
+          <Property Name="D3" Type="nvarchar" MaxLength="10" />
+          <Property Name="D4" Type="nvarchar" MaxLength="10" />
+          <Property Name="D5" Type="nvarchar" MaxLength="10" />
+          <Property Name="D6" Type="nvarchar" MaxLength="10" />
+          <Property Name="D7" Type="nvarchar" MaxLength="10" />
+          <Property Name="D8" Type="nvarchar" MaxLength="10" />
+          <Property Name="D9" Type="nvarchar" MaxLength="10" />
+          <Property Name="D10" Type="nvarchar" MaxLength="10" />
+          <Property Name="D11" Type="nvarchar" MaxLength="10" />
+          <Property Name="D12" Type="nvarchar" MaxLength="10" />
+          <Property Name="D13" Type="nvarchar" MaxLength="10" />
+          <Property Name="D14" Type="nvarchar" MaxLength="10" />
+          <Property Name="D15" Type="nvarchar" MaxLength="10" />
+          <Property Name="D16" Type="nvarchar" MaxLength="10" />
+          <Property Name="D17" Type="nvarchar" MaxLength="10" />
+          <Property Name="D18" Type="nvarchar" MaxLength="10" />
+          <Property Name="D19" Type="nvarchar" MaxLength="10" />
+          <Property Name="D20" Type="nvarchar" MaxLength="10" />
+          <Property Name="D21" Type="nvarchar" MaxLength="10" />
+          <Property Name="D22" Type="nvarchar" MaxLength="10" />
+          <Property Name="D23" Type="nvarchar" MaxLength="10" />
+          <Property Name="D24" Type="nvarchar" MaxLength="10" />
+          <Property Name="D25" Type="nvarchar" MaxLength="10" />
+          <Property Name="D26" Type="nvarchar" MaxLength="10" />
+          <Property Name="D27" Type="nvarchar" MaxLength="10" />
+          <Property Name="D28" Type="nvarchar" MaxLength="10" />
+          <Property Name="D29" Type="nvarchar" MaxLength="10" />
+          <Property Name="D30" Type="nvarchar" MaxLength="10" />
+          <Property Name="D31" Type="nvarchar" MaxLength="10" />
+          <Property Name="NGAYCONG" Type="float" />
+          <Property Name="NGAYPHEP" Type="float" />
+          <Property Name="NGAYKHONGPHEP" Type="float" />
+          <Property Name="CONGNGAYLE" Type="float" />
+          <Property Name="CONGCHUNHAT" Type="float" />
+          <Property Name="TONGNGAYCONG" Type="float" />
+          <Property Name="CREATED_DATE" Type="datetime" />
+          <Property Name="CREATED_BY" Type="int" />
+          <Property Name="UPDATED_DATE" Type="datetime" />
+          <Property Name="UPDATED_BY" Type="int" />
         </EntityType>
         <EntityType Name="tb_LOAICA">
           <Key>
@@ -353,6 +446,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="QuanlynhansuModelStoreContainer">
+          <EntitySet Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET" EntityType="Self.tb_BANG_CONG_NHAN_VIEN_CHI_TIET" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_BANGCONG" EntityType="Self.tb_BANGCONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_BOPHAN" EntityType="Self.tb_BOPHAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_CHUCVU" EntityType="Self.tb_CHUCVU" Schema="dbo" store:Type="Tables" />
@@ -360,6 +454,8 @@
           <EntitySet Name="tb_DANTOC" EntityType="Self.tb_DANTOC" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_HOPDONG" EntityType="Self.tb_HOPDONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_KHENTHUONG_KYLUAT" EntityType="Self.tb_KHENTHUONG_KYLUAT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_KYCONG" EntityType="Self.tb_KYCONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_KYCONGCHITIET" EntityType="Self.tb_KYCONGCHITIET" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_LOAICA" EntityType="Self.tb_LOAICA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_LOAICONG" EntityType="Self.tb_LOAICONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_NHANVIEN" EntityType="Self.tb_NHANVIEN" Schema="dbo" store:Type="Tables" />
@@ -420,6 +516,29 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanlynhansuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MAKYCONG" Type="Int32" Nullable="false" />
+          <Property Name="MANV" Type="Int32" />
+          <Property Name="MACTY" Type="Int32" />
+          <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NGAY" Type="DateTime" Precision="3" />
+          <Property Name="THU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GIOVAO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GIORA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NGAYPHEP" Type="Double" />
+          <Property Name="CONGNGAYLE" Type="Double" />
+          <Property Name="CONGCHUNHAT" Type="Double" />
+          <Property Name="KYHIEU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GHICHU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATED_BY" Type="Int32" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="UPDATED_BY" Type="Int32" />
+        </EntityType>
         <EntityType Name="tb_BANGCONG">
           <Key>
             <PropertyRef Name="MABC" />
@@ -511,6 +630,76 @@
           <Property Name="DELETED_BY" Type="Int32" />
           <Property Name="DELETED_DATE" Type="DateTime" Precision="3" />
           <NavigationProperty Name="tb_NHANVIEN" Relationship="Self.FK_tb_KHENTHUONG_KYLUAT_tb_NHANVIEN" FromRole="tb_KHENTHUONG_KYLUAT" ToRole="tb_NHANVIEN" />
+        </EntityType>
+        <EntityType Name="tb_KYCONG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MAKYCONG" Type="Int32" Nullable="false" />
+          <Property Name="NAM" Type="Int32" />
+          <Property Name="THANG" Type="Int32" />
+          <Property Name="KHOA" Type="Boolean" />
+          <Property Name="NGAYTINHCONG" Type="DateTime" Precision="3" />
+          <Property Name="NGAYCONGTRONGTHANG" Type="Double" />
+          <Property Name="MACTY" Type="Int32" />
+          <Property Name="TRANGTHAI" Type="Boolean" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATED_BY" Type="Int32" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="UPDATED_BY" Type="Int32" />
+          <Property Name="DELETED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="DELETED_BY" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tb_KYCONGCHITIET">
+          <Key>
+            <PropertyRef Name="MAKYCONG" />
+          </Key>
+          <Property Name="MAKYCONG" Type="Int32" Nullable="false" />
+          <Property Name="MANV" Type="Int32" />
+          <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MACTY" Type="Int32" />
+          <Property Name="D1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D2" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D3" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D4" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D5" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D6" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D7" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D8" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D9" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D10" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D11" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D12" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D13" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D14" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D15" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D16" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D17" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D18" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D19" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D20" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D21" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D22" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D23" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D24" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D25" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D26" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D28" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D29" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D30" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="D31" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NGAYCONG" Type="Double" />
+          <Property Name="NGAYPHEP" Type="Double" />
+          <Property Name="NGAYKHONGPHEP" Type="Double" />
+          <Property Name="CONGNGAYLE" Type="Double" />
+          <Property Name="CONGCHUNHAT" Type="Double" />
+          <Property Name="TONGNGAYCONG" Type="Double" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATED_BY" Type="Int32" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="UPDATED_BY" Type="Int32" />
         </EntityType>
         <EntityType Name="tb_LOAICA">
           <Key>
@@ -790,6 +979,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="QuanlynhansuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET" EntityType="Self.tb_BANG_CONG_NHAN_VIEN_CHI_TIET" />
           <EntitySet Name="tb_BANGCONG" EntityType="Self.tb_BANGCONG" />
           <EntitySet Name="tb_BOPHAN" EntityType="Self.tb_BOPHAN" />
           <EntitySet Name="tb_CHUCVU" EntityType="Self.tb_CHUCVU" />
@@ -797,6 +987,8 @@
           <EntitySet Name="tb_DANTOC" EntityType="Self.tb_DANTOC" />
           <EntitySet Name="tb_HOPDONG" EntityType="Self.tb_HOPDONG" />
           <EntitySet Name="tb_KHENTHUONG_KYLUAT" EntityType="Self.tb_KHENTHUONG_KYLUAT" />
+          <EntitySet Name="tb_KYCONG" EntityType="Self.tb_KYCONG" />
+          <EntitySet Name="tb_KYCONGCHITIET" EntityType="Self.tb_KYCONGCHITIET" />
           <EntitySet Name="tb_LOAICA" EntityType="Self.tb_LOAICA" />
           <EntitySet Name="tb_LOAICONG" EntityType="Self.tb_LOAICONG" />
           <EntitySet Name="tb_NHANVIEN" EntityType="Self.tb_NHANVIEN" />
@@ -858,6 +1050,30 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="QuanlynhansuModelStoreContainer" CdmEntityContainer="QuanlynhansuEntities">
+          <EntitySetMapping Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+            <EntityTypeMapping TypeName="QuanlynhansuModel.tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+              <MappingFragment StoreEntitySet="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAKYCONG" ColumnName="MAKYCONG" />
+                <ScalarProperty Name="MANV" ColumnName="MANV" />
+                <ScalarProperty Name="MACTY" ColumnName="MACTY" />
+                <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+                <ScalarProperty Name="NGAY" ColumnName="NGAY" />
+                <ScalarProperty Name="THU" ColumnName="THU" />
+                <ScalarProperty Name="GIOVAO" ColumnName="GIOVAO" />
+                <ScalarProperty Name="GIORA" ColumnName="GIORA" />
+                <ScalarProperty Name="NGAYPHEP" ColumnName="NGAYPHEP" />
+                <ScalarProperty Name="CONGNGAYLE" ColumnName="CONGNGAYLE" />
+                <ScalarProperty Name="CONGCHUNHAT" ColumnName="CONGCHUNHAT" />
+                <ScalarProperty Name="KYHIEU" ColumnName="KYHIEU" />
+                <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tb_BANGCONG">
             <EntityTypeMapping TypeName="QuanlynhansuModel.tb_BANGCONG">
               <MappingFragment StoreEntitySet="tb_BANGCONG">
@@ -948,6 +1164,78 @@
                 <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
                 <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
                 <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_KYCONG">
+            <EntityTypeMapping TypeName="QuanlynhansuModel.tb_KYCONG">
+              <MappingFragment StoreEntitySet="tb_KYCONG">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAKYCONG" ColumnName="MAKYCONG" />
+                <ScalarProperty Name="NAM" ColumnName="NAM" />
+                <ScalarProperty Name="THANG" ColumnName="THANG" />
+                <ScalarProperty Name="KHOA" ColumnName="KHOA" />
+                <ScalarProperty Name="NGAYTINHCONG" ColumnName="NGAYTINHCONG" />
+                <ScalarProperty Name="NGAYCONGTRONGTHANG" ColumnName="NGAYCONGTRONGTHANG" />
+                <ScalarProperty Name="MACTY" ColumnName="MACTY" />
+                <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
+                <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_KYCONGCHITIET">
+            <EntityTypeMapping TypeName="QuanlynhansuModel.tb_KYCONGCHITIET">
+              <MappingFragment StoreEntitySet="tb_KYCONGCHITIET">
+                <ScalarProperty Name="MAKYCONG" ColumnName="MAKYCONG" />
+                <ScalarProperty Name="MANV" ColumnName="MANV" />
+                <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+                <ScalarProperty Name="MACTY" ColumnName="MACTY" />
+                <ScalarProperty Name="D1" ColumnName="D1" />
+                <ScalarProperty Name="D2" ColumnName="D2" />
+                <ScalarProperty Name="D3" ColumnName="D3" />
+                <ScalarProperty Name="D4" ColumnName="D4" />
+                <ScalarProperty Name="D5" ColumnName="D5" />
+                <ScalarProperty Name="D6" ColumnName="D6" />
+                <ScalarProperty Name="D7" ColumnName="D7" />
+                <ScalarProperty Name="D8" ColumnName="D8" />
+                <ScalarProperty Name="D9" ColumnName="D9" />
+                <ScalarProperty Name="D10" ColumnName="D10" />
+                <ScalarProperty Name="D11" ColumnName="D11" />
+                <ScalarProperty Name="D12" ColumnName="D12" />
+                <ScalarProperty Name="D13" ColumnName="D13" />
+                <ScalarProperty Name="D14" ColumnName="D14" />
+                <ScalarProperty Name="D15" ColumnName="D15" />
+                <ScalarProperty Name="D16" ColumnName="D16" />
+                <ScalarProperty Name="D17" ColumnName="D17" />
+                <ScalarProperty Name="D18" ColumnName="D18" />
+                <ScalarProperty Name="D19" ColumnName="D19" />
+                <ScalarProperty Name="D20" ColumnName="D20" />
+                <ScalarProperty Name="D21" ColumnName="D21" />
+                <ScalarProperty Name="D22" ColumnName="D22" />
+                <ScalarProperty Name="D23" ColumnName="D23" />
+                <ScalarProperty Name="D24" ColumnName="D24" />
+                <ScalarProperty Name="D25" ColumnName="D25" />
+                <ScalarProperty Name="D26" ColumnName="D26" />
+                <ScalarProperty Name="D27" ColumnName="D27" />
+                <ScalarProperty Name="D28" ColumnName="D28" />
+                <ScalarProperty Name="D29" ColumnName="D29" />
+                <ScalarProperty Name="D30" ColumnName="D30" />
+                <ScalarProperty Name="D31" ColumnName="D31" />
+                <ScalarProperty Name="NGAYCONG" ColumnName="NGAYCONG" />
+                <ScalarProperty Name="NGAYPHEP" ColumnName="NGAYPHEP" />
+                <ScalarProperty Name="NGAYKHONGPHEP" ColumnName="NGAYKHONGPHEP" />
+                <ScalarProperty Name="CONGNGAYLE" ColumnName="CONGNGAYLE" />
+                <ScalarProperty Name="CONGCHUNHAT" ColumnName="CONGCHUNHAT" />
+                <ScalarProperty Name="TONGNGAYCONG" ColumnName="TONGNGAYCONG" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

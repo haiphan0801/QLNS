@@ -1,6 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="QuanlynhansuModelStoreContainer" CdmEntityContainer="QuanlynhansuEntities">
+    <EntitySetMapping Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+      <EntityTypeMapping TypeName="QuanlynhansuModel.tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+        <MappingFragment StoreEntitySet="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAKYCONG" ColumnName="MAKYCONG" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="NGAY" ColumnName="NGAY" />
+          <ScalarProperty Name="THU" ColumnName="THU" />
+          <ScalarProperty Name="GIOVAO" ColumnName="GIOVAO" />
+          <ScalarProperty Name="GIORA" ColumnName="GIORA" />
+          <ScalarProperty Name="NGAYPHEP" ColumnName="NGAYPHEP" />
+          <ScalarProperty Name="CONGNGAYLE" ColumnName="CONGNGAYLE" />
+          <ScalarProperty Name="CONGCHUNHAT" ColumnName="CONGCHUNHAT" />
+          <ScalarProperty Name="KYHIEU" ColumnName="KYHIEU" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tb_BANGCONG">
       <EntityTypeMapping TypeName="QuanlynhansuModel.tb_BANGCONG">
         <MappingFragment StoreEntitySet="tb_BANGCONG">
@@ -91,6 +115,78 @@
           <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
           <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
           <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_KYCONG">
+      <EntityTypeMapping TypeName="QuanlynhansuModel.tb_KYCONG">
+        <MappingFragment StoreEntitySet="tb_KYCONG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAKYCONG" ColumnName="MAKYCONG" />
+          <ScalarProperty Name="NAM" ColumnName="NAM" />
+          <ScalarProperty Name="THANG" ColumnName="THANG" />
+          <ScalarProperty Name="KHOA" ColumnName="KHOA" />
+          <ScalarProperty Name="NGAYTINHCONG" ColumnName="NGAYTINHCONG" />
+          <ScalarProperty Name="NGAYCONGTRONGTHANG" ColumnName="NGAYCONGTRONGTHANG" />
+          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
+          <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_KYCONGCHITIET">
+      <EntityTypeMapping TypeName="QuanlynhansuModel.tb_KYCONGCHITIET">
+        <MappingFragment StoreEntitySet="tb_KYCONGCHITIET">
+          <ScalarProperty Name="MAKYCONG" ColumnName="MAKYCONG" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
+          <ScalarProperty Name="D1" ColumnName="D1" />
+          <ScalarProperty Name="D2" ColumnName="D2" />
+          <ScalarProperty Name="D3" ColumnName="D3" />
+          <ScalarProperty Name="D4" ColumnName="D4" />
+          <ScalarProperty Name="D5" ColumnName="D5" />
+          <ScalarProperty Name="D6" ColumnName="D6" />
+          <ScalarProperty Name="D7" ColumnName="D7" />
+          <ScalarProperty Name="D8" ColumnName="D8" />
+          <ScalarProperty Name="D9" ColumnName="D9" />
+          <ScalarProperty Name="D10" ColumnName="D10" />
+          <ScalarProperty Name="D11" ColumnName="D11" />
+          <ScalarProperty Name="D12" ColumnName="D12" />
+          <ScalarProperty Name="D13" ColumnName="D13" />
+          <ScalarProperty Name="D14" ColumnName="D14" />
+          <ScalarProperty Name="D15" ColumnName="D15" />
+          <ScalarProperty Name="D16" ColumnName="D16" />
+          <ScalarProperty Name="D17" ColumnName="D17" />
+          <ScalarProperty Name="D18" ColumnName="D18" />
+          <ScalarProperty Name="D19" ColumnName="D19" />
+          <ScalarProperty Name="D20" ColumnName="D20" />
+          <ScalarProperty Name="D21" ColumnName="D21" />
+          <ScalarProperty Name="D22" ColumnName="D22" />
+          <ScalarProperty Name="D23" ColumnName="D23" />
+          <ScalarProperty Name="D24" ColumnName="D24" />
+          <ScalarProperty Name="D25" ColumnName="D25" />
+          <ScalarProperty Name="D26" ColumnName="D26" />
+          <ScalarProperty Name="D27" ColumnName="D27" />
+          <ScalarProperty Name="D28" ColumnName="D28" />
+          <ScalarProperty Name="D29" ColumnName="D29" />
+          <ScalarProperty Name="D30" ColumnName="D30" />
+          <ScalarProperty Name="D31" ColumnName="D31" />
+          <ScalarProperty Name="NGAYCONG" ColumnName="NGAYCONG" />
+          <ScalarProperty Name="NGAYPHEP" ColumnName="NGAYPHEP" />
+          <ScalarProperty Name="NGAYKHONGPHEP" ColumnName="NGAYKHONGPHEP" />
+          <ScalarProperty Name="CONGNGAYLE" ColumnName="CONGNGAYLE" />
+          <ScalarProperty Name="CONGCHUNHAT" ColumnName="CONGCHUNHAT" />
+          <ScalarProperty Name="TONGNGAYCONG" ColumnName="TONGNGAYCONG" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
