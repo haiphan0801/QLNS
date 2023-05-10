@@ -17,6 +17,7 @@ namespace QLNhanSu
         public LoaiCong()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         LOAICONG _loaicong;

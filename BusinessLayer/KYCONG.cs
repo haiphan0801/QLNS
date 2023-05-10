@@ -10,9 +10,9 @@ namespace BusinessLayer
     public class KYCONG
     {
         QuanlynhansuEntities db = new QuanlynhansuEntities();
-        public tb_KYCONG getItem(int id)
+        public tb_KYCONG getItem(int makycong)
         {
-            return db.tb_KYCONG.FirstOrDefault(x => x.ID == id);
+            return db.tb_KYCONG.FirstOrDefault(x => x.MAKYCONG == makycong);
         }
         public List<tb_KYCONG> getList()
         {
@@ -35,8 +35,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _kc = db.tb_KYCONG.FirstOrDefault(x => x.ID == kc.ID);
-                _kc.MAKYCONG = kc.MAKYCONG;
+                var _kc = db.tb_KYCONG.FirstOrDefault(x => x.MAKYCONG == kc.MAKYCONG);
                 _kc.NAM = kc.NAM;
                 _kc.THANG = kc.THANG;
                 _kc.KHOA = kc.KHOA;
@@ -53,12 +52,12 @@ namespace BusinessLayer
                 throw new Exception("Lỗi: " + ex.Message);
             }
         }
-        public void Delete(int idloaica, int iduser)
+        public void Delete(int makycong, int iduser)
         {
 
             try
             {
-                var _lc = db.tb_KYCONG.FirstOrDefault(x => x.ID == idloaica);
+                var _lc = db.tb_KYCONG.FirstOrDefault(x => x.MAKYCONG == makycong);
                 _lc.DELETED_BY = iduser;
                 _lc.DELETED_DATE = DateTime.Now;
                 db.SaveChanges();
@@ -66,6 +65,21 @@ namespace BusinessLayer
             catch (Exception ex)
             {
                 throw new Exception("Lỗi: " + ex.Message);
+            }
+        }
+        public bool KiemTraPhatSinhKyCong(int makycong)
+        {
+            var kc = db.tb_KYCONG.FirstOrDefault(x => x.MAKYCONG == makycong);
+            if (kc == null)
+            {
+                return false;
+            }
+            else
+            {
+                if (kc.TRANGTHAI == true)
+                    return true;
+                else
+                    return false;
             }
         }
     }

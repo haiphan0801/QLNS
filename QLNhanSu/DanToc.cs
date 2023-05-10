@@ -99,6 +99,12 @@ namespace QLNhanSu
         {
             if (_them)
             {
+                if (_dantoc.getList().Any(x => x.TENDT == txtTen.Text))
+                {
+                    MessageBox.Show("Tên dân tộc đã tồn tại!");
+                    return;
+                }
+
                 tb_DANTOC dt = new tb_DANTOC();
                 dt.TENDT = txtTen.Text;
                 _dantoc.Add(dt);
@@ -106,6 +112,12 @@ namespace QLNhanSu
             else
             {
                 var dt = _dantoc.getItem(_id);
+                if (_dantoc.getList().Any(x => x.TENDT == txtTen.Text && x.ID != _id))
+                {
+                    MessageBox.Show("Tên dân tộc đã tồn tại!");
+                    return;
+                }
+
                 dt.TENDT = txtTen.Text;
                 _dantoc.Update(dt);
             }

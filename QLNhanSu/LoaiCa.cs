@@ -17,6 +17,7 @@ namespace QLNhanSu
         public LoaiCa()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         LOAICA _loaica;

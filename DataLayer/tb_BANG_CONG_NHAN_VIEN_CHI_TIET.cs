@@ -15,7 +15,7 @@ namespace DataLayer
     public partial class tb_BANG_CONG_NHAN_VIEN_CHI_TIET
     {
         public int ID { get; set; }
-        public int MAKYCONG { get; set; }
+        public Nullable<int> MAKYCONG { get; set; }
         public Nullable<int> MANV { get; set; }
         public Nullable<int> MACTY { get; set; }
         public string HOTEN { get; set; }
@@ -26,6 +26,7 @@ namespace DataLayer
         public Nullable<double> NGAYPHEP { get; set; }
         public Nullable<double> CONGNGAYLE { get; set; }
         public Nullable<double> CONGCHUNHAT { get; set; }
+        public Nullable<double> NGAYCONG { get; set; }
         public string KYHIEU { get; set; }
         public string GHICHU { get; set; }
         public Nullable<System.DateTime> CREATED_DATE { get; set; }

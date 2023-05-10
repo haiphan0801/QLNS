@@ -15,7 +15,7 @@ namespace DataLayer
     public partial class tb_KYCONGCHITIET
     {
         public int MAKYCONG { get; set; }
-        public Nullable<int> MANV { get; set; }
+        public int MANV { get; set; }
         public string HOTEN { get; set; }
         public Nullable<int> MACTY { get; set; }
         public string D1 { get; set; }

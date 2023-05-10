@@ -123,5 +123,14 @@ namespace BusinessLayer
                 throw new Exception("Lỗi: " + ex.Message);
             }
         }
+        public bool CheckCCCD(string cccd)
+        {
+            var nv = db.tb_NHANVIEN.FirstOrDefault(x => x.CCCD == cccd);
+            if (nv != null)
+            {
+                return false; 
+            }
+            return true; 
+        }
     }
 }

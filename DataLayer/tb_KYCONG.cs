@@ -14,7 +14,6 @@ namespace DataLayer
     
     public partial class tb_KYCONG
     {
-        public int ID { get; set; }
         public int MAKYCONG { get; set; }
         public Nullable<int> NAM { get; set; }
         public Nullable<int> THANG { get; set; }
@@ -23,11 +22,11 @@ namespace DataLayer
         public Nullable<double> NGAYCONGTRONGTHANG { get; set; }
         public Nullable<int> MACTY { get; set; }
         public Nullable<bool> TRANGTHAI { get; set; }
-        public Nullable<System.DateTime> CREATED_DATE { get; set; }
         public Nullable<int> CREATED_BY { get; set; }
-        public Nullable<System.DateTime> UPDATED_DATE { get; set; }
+        public Nullable<System.DateTime> CREATED_DATE { get; set; }
         public Nullable<int> UPDATED_BY { get; set; }
-        public Nullable<System.DateTime> DELETED_DATE { get; set; }
+        public Nullable<System.DateTime> UPDATED_DATE { get; set; }
         public Nullable<int> DELETED_BY { get; set; }
+        public Nullable<System.DateTime> DELETED_DATE { get; set; }
     }
 }

@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BANG_CONG_NHAN_VIEN_CHI_TIET.cs" />
     <Compile Include="BOPHAN.cs" />
     <Compile Include="CHUCVU.cs" />
     <Compile Include="ClassXuLy\WordUltil.cs" />
@@ -61,8 +62,10 @@
     <Compile Include="HOPDONG.cs" />
     <Compile Include="KHENTHUONG_KYLUAT.cs" />
     <Compile Include="KYCONG.cs" />
+    <Compile Include="KYCONGCHITIET.cs" />
     <Compile Include="LOAICA.cs" />
     <Compile Include="LOAICONG.cs" />
+    <Compile Include="MyFunctions.cs" />
     <Compile Include="NHANVIEN.cs" />
     <Compile Include="NHANVIEN_DIEUCHUYEN.cs" />
     <Compile Include="NHANVIEN_THOIVIEC.cs" />

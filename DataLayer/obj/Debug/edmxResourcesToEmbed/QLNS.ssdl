@@ -5,7 +5,7 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MAKYCONG" Type="int" Nullable="false" />
+    <Property Name="MAKYCONG" Type="int" />
     <Property Name="MANV" Type="int" />
     <Property Name="MACTY" Type="int" />
     <Property Name="HOTEN" Type="nvarchar" MaxLength="50" />
@@ -16,6 +16,7 @@
     <Property Name="NGAYPHEP" Type="float" />
     <Property Name="CONGNGAYLE" Type="float" />
     <Property Name="CONGCHUNHAT" Type="float" />
+    <Property Name="NGAYCONG" Type="float" />
     <Property Name="KYHIEU" Type="nvarchar" MaxLength="50" />
     <Property Name="GHICHU" Type="nvarchar" MaxLength="500" />
     <Property Name="CREATED_DATE" Type="datetime" />
@@ -111,9 +112,8 @@
   </EntityType>
   <EntityType Name="tb_KYCONG">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="MAKYCONG" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MAKYCONG" Type="int" Nullable="false" />
     <Property Name="NAM" Type="int" />
     <Property Name="THANG" Type="int" />
@@ -122,19 +122,20 @@
     <Property Name="NGAYCONGTRONGTHANG" Type="float" />
     <Property Name="MACTY" Type="int" />
     <Property Name="TRANGTHAI" Type="bit" />
-    <Property Name="CREATED_DATE" Type="datetime" />
     <Property Name="CREATED_BY" Type="int" />
-    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="CREATED_DATE" Type="datetime" />
     <Property Name="UPDATED_BY" Type="int" />
-    <Property Name="DELETED_DATE" Type="datetime" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
     <Property Name="DELETED_BY" Type="int" />
+    <Property Name="DELETED_DATE" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_KYCONGCHITIET">
     <Key>
       <PropertyRef Name="MAKYCONG" />
+      <PropertyRef Name="MANV" />
     </Key>
     <Property Name="MAKYCONG" Type="int" Nullable="false" />
-    <Property Name="MANV" Type="int" />
+    <Property Name="MANV" Type="int" Nullable="false" />
     <Property Name="HOTEN" Type="nvarchar" MaxLength="50" />
     <Property Name="MACTY" Type="int" />
     <Property Name="D1" Type="nvarchar" MaxLength="10" />
@@ -186,12 +187,12 @@
     <Property Name="IDLOAICA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENLOAICA" Type="nvarchar" MaxLength="50" />
     <Property Name="HESO" Type="float" />
-    <Property Name="CREATED_BY" Type="int" />
     <Property Name="CREATED_DATE" Type="datetime" />
-    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="CREATED_BY" Type="int" />
     <Property Name="UPDATED_DATE" Type="datetime" />
-    <Property Name="DELETED_BY" Type="int" />
+    <Property Name="UPDATED_BY" Type="int" />
     <Property Name="DELETED_DATE" Type="datetime" />
+    <Property Name="DELETED_BY" Type="int" />
   </EntityType>
   <EntityType Name="tb_LOAICONG">
     <Key>
@@ -200,12 +201,12 @@
     <Property Name="IDLC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENLC" Type="nvarchar" MaxLength="50" />
     <Property Name="HESO" Type="float" />
-    <Property Name="CREATED_BY" Type="int" />
     <Property Name="CREATED_DATE" Type="datetime" />
-    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="CREATED_BY" Type="int" />
     <Property Name="UPDATED_DATE" Type="datetime" />
-    <Property Name="DELETED_BY" Type="int" />
+    <Property Name="UPDATED_BY" Type="int" />
     <Property Name="DELETED_DATE" Type="datetime" />
+    <Property Name="DELETED_BY" Type="int" />
   </EntityType>
   <EntityType Name="tb_NHANVIEN">
     <Key>

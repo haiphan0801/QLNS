@@ -39,6 +39,8 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtNgay = new System.Windows.Forms.DateTimePicker();
             this.txtNoiDung = new System.Windows.Forms.TextBox();
             this.txtLyDo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSoQD = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtNgay = new System.Windows.Forms.DateTimePicker();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -177,6 +177,25 @@
             this.panel2.Size = new System.Drawing.Size(1068, 139);
             this.panel2.TabIndex = 4;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(298, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Ngày";
+            // 
+            // dtNgay
+            // 
+            this.dtNgay.CustomFormat = "dd/MM/yyyy";
+            this.dtNgay.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgay.Location = new System.Drawing.Point(336, 14);
+            this.dtNgay.Name = "dtNgay";
+            this.dtNgay.Size = new System.Drawing.Size(200, 24);
+            this.dtNgay.TabIndex = 24;
+            // 
             // txtNoiDung
             // 
             this.txtNoiDung.Location = new System.Drawing.Point(192, 67);
@@ -243,29 +262,11 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Số HĐ";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(298, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Ngày";
-            // 
-            // dtNgay
-            // 
-            this.dtNgay.CustomFormat = "dd/MM/yyyy";
-            this.dtNgay.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNgay.Location = new System.Drawing.Point(336, 14);
-            this.dtNgay.Name = "dtNgay";
-            this.dtNgay.Size = new System.Drawing.Size(200, 24);
-            this.dtNgay.TabIndex = 24;
-            // 
             // KhenThuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1068, 377);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
