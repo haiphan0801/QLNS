@@ -1,5 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="QuanlynhansuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAKYCONG" Type="Int32" />
+    <Property Name="MANV" Type="Int32" />
+    <Property Name="MACTY" Type="Int32" />
+    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGAY" Type="DateTime" Precision="3" />
+    <Property Name="THU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GIOVAO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GIORA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYPHEP" Type="Double" />
+    <Property Name="CONGNGAYLE" Type="Double" />
+    <Property Name="CONGCHUNHAT" Type="Double" />
+    <Property Name="NGAYCONG" Type="Double" />
+    <Property Name="KYHIEU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GHICHU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATED_BY" Type="Int32" />
+    <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATED_BY" Type="Int32" />
+  </EntityType>
   <EntityType Name="tb_BANGCONG">
     <Key>
       <PropertyRef Name="MABC" />
@@ -32,6 +56,14 @@
     <Property Name="IDCV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENCV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="tb_NHANVIEN" Relationship="Self.FK_NHANVIEN_CHUCVU" FromRole="tb_CHUCVU" ToRole="tb_NHANVIEN" />
+  </EntityType>
+  <EntityType Name="tb_CONFIG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VALUES" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tb_CONGTY">
     <Key>
@@ -276,6 +308,14 @@
     <Property Name="SOGIO" Type="Double" />
     <Property Name="MANV" Type="Int32" />
     <Property Name="IDLOAICA" Type="Int32" />
+    <Property Name="SOTIEN" Type="Double" />
+    <Property Name="GHICHU" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CREATED_BY" Type="Int32" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATED_BY" Type="Int32" />
+    <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETED_BY" Type="Int32" />
+    <Property Name="DELETED_DATE" Type="DateTime" Precision="3" />
     <NavigationProperty Name="tb_LOAICA" Relationship="Self.FK_TANGCA_LOAICA" FromRole="tb_TANGCA" ToRole="tb_LOAICA" />
     <NavigationProperty Name="tb_NHANVIEN" Relationship="Self.FK_TANGCA_NHANVIEN" FromRole="tb_TANGCA" ToRole="tb_NHANVIEN" />
   </EntityType>
@@ -303,8 +343,14 @@
     <Property Name="THANG" Type="Int32" />
     <Property Name="NGAY" Type="Int32" />
     <Property Name="SOTIEN" Type="Double" />
-    <Property Name="TRANGTHAI" Type="Boolean" />
     <Property Name="MANV" Type="Int32" />
+    <Property Name="GHICHU" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CREATED_BY" Type="Int32" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATED_BY" Type="Int32" />
+    <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETED_BY" Type="Int32" />
+    <Property Name="DELETED_DATE" Type="DateTime" Precision="3" />
     <NavigationProperty Name="tb_NHANVIEN" Relationship="Self.FK_UNGLUONG_NHANVIEN" FromRole="tb_UNGLUONG" ToRole="tb_NHANVIEN" />
   </EntityType>
   <Association Name="FK_BANGCONG_LOAICONG">
@@ -440,9 +486,11 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="QuanlynhansuEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET" EntityType="Self.tb_BANG_CONG_NHAN_VIEN_CHI_TIET" />
     <EntitySet Name="tb_BANGCONG" EntityType="Self.tb_BANGCONG" />
     <EntitySet Name="tb_BOPHAN" EntityType="Self.tb_BOPHAN" />
     <EntitySet Name="tb_CHUCVU" EntityType="Self.tb_CHUCVU" />
+    <EntitySet Name="tb_CONFIG" EntityType="Self.tb_CONFIG" />
     <EntitySet Name="tb_CONGTY" EntityType="Self.tb_CONGTY" />
     <EntitySet Name="tb_DANTOC" EntityType="Self.tb_DANTOC" />
     <EntitySet Name="tb_HOPDONG" EntityType="Self.tb_HOPDONG" />
@@ -503,30 +551,5 @@
       <End Role="tb_NHANVIEN" EntitySet="tb_NHANVIEN" />
       <End Role="tb_UNGLUONG" EntitySet="tb_UNGLUONG" />
     </AssociationSet>
-    <EntitySet Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET" EntityType="QuanlynhansuModel.tb_BANG_CONG_NHAN_VIEN_CHI_TIET" />
   </EntityContainer>
-  <EntityType Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="MAKYCONG" Type="Int32" />
-    <Property Name="MANV" Type="Int32" />
-    <Property Name="MACTY" Type="Int32" />
-    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="NGAY" Type="DateTime" Precision="3" />
-    <Property Name="THU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="GIOVAO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="GIORA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="NGAYPHEP" Type="Double" />
-    <Property Name="CONGNGAYLE" Type="Double" />
-    <Property Name="CONGCHUNHAT" Type="Double" />
-    <Property Name="NGAYCONG" Type="Double" />
-    <Property Name="KYHIEU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="GHICHU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
-    <Property Name="CREATED_BY" Type="Int32" />
-    <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
-    <Property Name="UPDATED_BY" Type="Int32" />
-  </EntityType>
 </Schema>

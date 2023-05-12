@@ -79,6 +79,9 @@
     <Compile Include="tb_CHUCVU.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_CONFIG.cs">
+      <DependentUpon>QLNS.tt</DependentUpon>
+    </Compile>
     <Compile Include="tb_CONGTY.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>

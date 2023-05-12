@@ -130,3 +130,15 @@ C:\Users\HEHE\Source\Repos\QLNS3\DataLayer\obj\Debug\DataLayer.csproj.CoreCompil
 C:\Users\HEHE\Source\Repos\QLNS3\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 C:\Users\HEHE\Source\Repos\QLNS3\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\HEHE\Source\Repos\QLNS3\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Admin\Source\Repos\QLNS17\DataLayer\obj\Debug\DataLayer.pdb

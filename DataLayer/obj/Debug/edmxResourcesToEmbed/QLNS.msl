@@ -1,6 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="QuanlynhansuModelStoreContainer" CdmEntityContainer="QuanlynhansuEntities">
+    <EntitySetMapping Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+      <EntityTypeMapping TypeName="QuanlynhansuModel.tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+        <MappingFragment StoreEntitySet="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAKYCONG" ColumnName="MAKYCONG" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="NGAY" ColumnName="NGAY" />
+          <ScalarProperty Name="THU" ColumnName="THU" />
+          <ScalarProperty Name="GIOVAO" ColumnName="GIOVAO" />
+          <ScalarProperty Name="GIORA" ColumnName="GIORA" />
+          <ScalarProperty Name="NGAYPHEP" ColumnName="NGAYPHEP" />
+          <ScalarProperty Name="CONGNGAYLE" ColumnName="CONGNGAYLE" />
+          <ScalarProperty Name="CONGCHUNHAT" ColumnName="CONGCHUNHAT" />
+          <ScalarProperty Name="NGAYCONG" ColumnName="NGAYCONG" />
+          <ScalarProperty Name="KYHIEU" ColumnName="KYHIEU" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tb_BANGCONG">
       <EntityTypeMapping TypeName="QuanlynhansuModel.tb_BANGCONG">
         <MappingFragment StoreEntitySet="tb_BANGCONG">
@@ -30,6 +55,15 @@
         <MappingFragment StoreEntitySet="tb_CHUCVU">
           <ScalarProperty Name="IDCV" ColumnName="IDCV" />
           <ScalarProperty Name="TENCV" ColumnName="TENCV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_CONFIG">
+      <EntityTypeMapping TypeName="QuanlynhansuModel.tb_CONFIG">
+        <MappingFragment StoreEntitySet="tb_CONFIG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="VALUES" ColumnName="VALUES" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -272,6 +306,14 @@
           <ScalarProperty Name="SOGIO" ColumnName="SOGIO" />
           <ScalarProperty Name="MANV" ColumnName="MANV" />
           <ScalarProperty Name="IDLOAICA" ColumnName="IDLOAICA" />
+          <ScalarProperty Name="SOTIEN" ColumnName="SOTIEN" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
+          <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -299,33 +341,14 @@
           <ScalarProperty Name="THANG" ColumnName="THANG" />
           <ScalarProperty Name="NGAY" ColumnName="NGAY" />
           <ScalarProperty Name="SOTIEN" ColumnName="SOTIEN" />
-          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
           <ScalarProperty Name="MANV" ColumnName="MANV" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
-      <EntityTypeMapping TypeName="QuanlynhansuModel.tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
-        <MappingFragment StoreEntitySet="tb_BANG_CONG_NHAN_VIEN_CHI_TIET">
-          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
-          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
           <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
           <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
-          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
-          <ScalarProperty Name="KYHIEU" ColumnName="KYHIEU" />
-          <ScalarProperty Name="NGAYCONG" ColumnName="NGAYCONG" />
-          <ScalarProperty Name="CONGCHUNHAT" ColumnName="CONGCHUNHAT" />
-          <ScalarProperty Name="CONGNGAYLE" ColumnName="CONGNGAYLE" />
-          <ScalarProperty Name="NGAYPHEP" ColumnName="NGAYPHEP" />
-          <ScalarProperty Name="GIORA" ColumnName="GIORA" />
-          <ScalarProperty Name="GIOVAO" ColumnName="GIOVAO" />
-          <ScalarProperty Name="THU" ColumnName="THU" />
-          <ScalarProperty Name="NGAY" ColumnName="NGAY" />
-          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
-          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
-          <ScalarProperty Name="MANV" ColumnName="MANV" />
-          <ScalarProperty Name="MAKYCONG" ColumnName="MAKYCONG" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
+          <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

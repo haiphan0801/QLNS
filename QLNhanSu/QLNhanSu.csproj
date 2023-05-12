@@ -144,6 +144,12 @@
     <Compile Include="PhongBan.Designer.cs">
       <DependentUpon>PhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="TangCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TangCa.Designer.cs">
+      <DependentUpon>TangCa.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThoiViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UngLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UngLuong.Designer.cs">
+      <DependentUpon>UngLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Waiting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +245,9 @@
     <EmbeddedResource Include="PhongBan.resx">
       <DependentUpon>PhongBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TangCa.resx">
+      <DependentUpon>TangCa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThoiViec.resx">
       <DependentUpon>ThoiViec.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +274,9 @@
     </Compile>
     <EmbeddedResource Include="ThongTinCaNhan.resx">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UngLuong.resx">
+      <DependentUpon>UngLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Waiting.resx">
       <DependentUpon>Waiting.cs</DependentUpon>

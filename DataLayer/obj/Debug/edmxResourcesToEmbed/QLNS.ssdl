@@ -53,6 +53,14 @@
     <Property Name="IDCV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENCV" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="tb_CONFIG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="VALUES" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="tb_CONGTY">
     <Key>
       <PropertyRef Name="MACTY" />
@@ -282,6 +290,14 @@
     <Property Name="SOGIO" Type="float" />
     <Property Name="MANV" Type="int" />
     <Property Name="IDLOAICA" Type="int" />
+    <Property Name="SOTIEN" Type="float" />
+    <Property Name="GHICHU" Type="nvarchar" MaxLength="250" />
+    <Property Name="CREATED_BY" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="DELETED_BY" Type="int" />
+    <Property Name="DELETED_DATE" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_TONGIAO">
     <Key>
@@ -306,8 +322,14 @@
     <Property Name="THANG" Type="int" />
     <Property Name="NGAY" Type="int" />
     <Property Name="SOTIEN" Type="float" />
-    <Property Name="TRANGTHAI" Type="bit" />
     <Property Name="MANV" Type="int" />
+    <Property Name="GHICHU" Type="nvarchar" MaxLength="250" />
+    <Property Name="CREATED_BY" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="DELETED_BY" Type="int" />
+    <Property Name="DELETED_DATE" Type="datetime" />
   </EntityType>
   <Association Name="FK_BANGCONG_LOAICONG">
     <End Role="tb_LOAICONG" Type="Self.tb_LOAICONG" Multiplicity="0..1" />
@@ -446,6 +468,7 @@
     <EntitySet Name="tb_BANGCONG" EntityType="Self.tb_BANGCONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_BOPHAN" EntityType="Self.tb_BOPHAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_CHUCVU" EntityType="Self.tb_CHUCVU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_CONFIG" EntityType="Self.tb_CONFIG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_CONGTY" EntityType="Self.tb_CONGTY" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_DANTOC" EntityType="Self.tb_DANTOC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_HOPDONG" EntityType="Self.tb_HOPDONG" Schema="dbo" store:Type="Tables" />

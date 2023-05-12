@@ -19,8 +19,14 @@ namespace DataLayer
         public Nullable<int> THANG { get; set; }
         public Nullable<int> NGAY { get; set; }
         public Nullable<double> SOTIEN { get; set; }
-        public Nullable<bool> TRANGTHAI { get; set; }
         public Nullable<int> MANV { get; set; }
+        public string GHICHU { get; set; }
+        public Nullable<int> CREATED_BY { get; set; }
+        public Nullable<System.DateTime> CREATED_DATE { get; set; }
+        public Nullable<int> UPDATED_BY { get; set; }
+        public Nullable<System.DateTime> UPDATED_DATE { get; set; }
+        public Nullable<int> DELETED_BY { get; set; }
+        public Nullable<System.DateTime> DELETED_DATE { get; set; }
     
         public virtual tb_NHANVIEN tb_NHANVIEN { get; set; }
     }
